@@ -1,0 +1,21 @@
+.keyboard{
+    position: fixed;
+    z-index: 9999;
+    top: 90%;
+    height: 75px;
+    background: rgb(0, 112, 218);
+}
+.chat{
+
+    height: 80%;
+}
+.msg{
+    width: 80%;
+    padding: 14px;
+    margin: 7px;
+    background: lightblue;
+    border-radius: 7px; 
+}
+.msgMe{
+    background: pink !important;
+}

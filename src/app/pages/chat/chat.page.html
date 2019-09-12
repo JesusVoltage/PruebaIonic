@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons routerLink="">
+      < </ion-buttons> <ion-title>Sala de chat ({{username}})</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="chat">
+      <!-- [ngClass]="{msgMe : m.user == username}" -->
+    <div class="msg"  *ngFor="let m of msgList">
+      <h6 margin-bottom>{{m.user}} : {{m.date | date:hh:mm}}</h6>
+      <ion-text>
+
+        {{m.text}}
+
+      </ion-text>
+    </div>
+  </div>
+
+
+
+  <div class="keyboard">
+    <form margin-top [formGroup]="form" (submit)="submitMessage();">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-input formControlName="text"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <div margin text-center>
+              <ion-label></ion-label>
+              <ion-button [disabled]="!form.valid" type="submit">></ion-button>
+            </div>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+
+
+
+    </form>
+  </div>
+</ion-content>

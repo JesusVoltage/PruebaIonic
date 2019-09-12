@@ -1,0 +1,19 @@
+<ion-content>
+
+  <div text-center class="ion-padding wellcome">
+    <h5>¡Introduce tu nombre y comienza a chatear!</h5>
+  </div>
+
+  <form margin-top [formGroup]="form" (submit)="submitForm();">
+
+    <ion-item>
+      <ion-input formControlName="username"></ion-input>
+    </ion-item>
+
+    <div margin text-center>
+      <ion-label></ion-label>
+      <ion-button [disabled]="!form.valid" type="submit">Submit</ion-button>
+    </div>
+
+  </form>
+</ion-content>
